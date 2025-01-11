@@ -1,0 +1,15 @@
+// s0 = a, s1 = b, s2 = reminder
+
+addi s0,x0,793
+addi s1,x0,7
+
+add s2,x0,x0
+
+Loop:
+	beq s1, x0, Exit //check Loop condtion
+    rem s2, s0, s1 
+    mv s0, s1
+	mv s1, s2
+	j Loop 
+
+Exit:
